@@ -32,6 +32,7 @@ public class Menu : MonoBehaviour
     public Button charactersBtn;
     public Button dialogBtn;
     public Button backBtn;
+    public GameObject saveFileScreen;
     //public Button settingsBtn;
     // public Button filesBtn;
 
@@ -65,5 +66,10 @@ public class Menu : MonoBehaviour
     public void OnSettingsButton()
     {
         SetScreen(settingsScreen);
+    }
+
+    public void OnCreditsButton()
+    {
+        SetScreen(creditsScreen);
     }
 }
