@@ -33,6 +33,8 @@ public class Menu : MonoBehaviour
     public Button dialogBtn;
     public Button backBtn;
     public GameObject saveFileScreen;
+    public GameObject characterScreen;
+    public GameObject dialogScreen;
     //public Button settingsBtn;
     // public Button filesBtn;
 
@@ -42,6 +44,15 @@ public class Menu : MonoBehaviour
         settingsScreen.SetActive(false);
         creditsScreen.SetActive(false);
         loadGameScreen.SetActive(false);
+
+        screen.SetActive(true);
+    }
+
+    void SetMiniScreen(GameObject screen)
+    {
+        saveFileScreen.SetActive(false);
+        characterScreen.SetActive(false);
+        dialogScreen.SetActive(false);
 
         screen.SetActive(true);
     }
@@ -71,5 +82,15 @@ public class Menu : MonoBehaviour
     public void OnCreditsButton()
     {
         SetScreen(creditsScreen);
+    }
+
+    public void OnSaveFilesButton()
+    {
+        SetMiniScreen(saveFileScreen);
+    }
+
+    public void OnCharacterButton()
+    {
+        SetMiniScreen(characterScreen);
     }
 }
